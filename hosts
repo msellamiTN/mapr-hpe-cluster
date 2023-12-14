@@ -1,0 +1,5 @@
+192.168.33.10 mapr-edge-data2-ai.com
+192.168.33.11 mapr-master-data2-ai.com
+192.168.33.12 mapr-worker1-data2-ai.com
+192.168.33.13 mapr-worker2-data2-ai.com
+192.168.33.14 mapr-worker3-data2-ai.com
