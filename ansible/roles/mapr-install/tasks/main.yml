@@ -1,0 +1,36 @@
+---
+- name: Check if mapr-setup.sh exists
+  stat:
+    path: "/tmp/mapr-setup.sh"
+  register: mapr_setup_exists
+
+- name: Download and Install MapR Setup
+  get_url:
+    url: "https://package.ezmeral.hpe.com/releases/installer/mapr-setup.sh"
+    dest: "/tmp/mapr-setup.sh"
+    headers:
+      "Authorization": "Basic {{ (email + ':' + token) | b64encode }}"
+  when: not mapr_setup_exists.stat.exists
+  become: yes
+  
+- name: Change permissions for mapr-setup.sh
+  file:
+    path: "/tmp/mapr-setup.sh"
+    mode: "+x"
+  when: not mapr_setup_exists.stat.exists
+  become: yes
+
+- name: Run MapR Setup
+  shell: "/tmp/mapr-setup.sh -r https://{{ email }}:{{ token }}@package.ezmeral.hpe.com/releases/"
+  when: not mapr_setup_exists.stat.exists
+  become: yes
+
+- name: Check if mapr-installer service is installed
+  command: "command -v mapr-installer"
+  register: mapr_installer_command
+  become: yes
+
+- name: Install mapr-installer service
+  command: "sudo service mapr-installer install"
+  when: mapr_installer_command.rc != 0
+  become: yes

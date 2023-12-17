@@ -1,0 +1,6 @@
+
+# Add other hosts as needed
+[mapr-edge:vars]
+MAPR_UID=1001
+MAPR_GID=1001
+MAPR_USER=mapr

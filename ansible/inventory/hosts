@@ -1,0 +1,16 @@
+# Define groups
+# inventory/hosts
+[all]
+mapr-edge   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host=127.0.0.1 ansible_port=2220 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+mapr-master   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host=127.0.0.1 ansible_port=2221 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+mapr-worker1   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host=127.0.0.1  ansible_port=2222 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+mapr-worker2   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host=127.0.0.1  ansible_port=2223 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+mapr-worker3   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host=127.0.0.1  ansible_port=2224 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa 
+
+
+
+ # Add other hosts as needed
+[mapr-edge:vars]
+MAPR_UID=1001
+MAPR_GID=1001
+MAPR_USER=mapr

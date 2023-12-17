@@ -1,0 +1,4 @@
+# roles/mapr-edge-setup/meta/main.yml
+
+---
+dependencies: []

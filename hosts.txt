@@ -1,0 +1,26 @@
+[mapr-master]
+mapr-master   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=
+
+2221 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+[mapr-edge]
+mapr-edge   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=
+
+2220 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+[mapr-worker1]
+mapr-worker1   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=
+
+2222 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+[mapr-worker2]
+mapr-worker2   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=
+
+2223 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+[mapr-worker3]
+mapr-worker3   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=
+
+2224 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+\n# Add other hosts as needed\n[mapr-edge:vars]\nMAPR_UID=1001\nMAPR_GID=1001\nMAPR_USER=mapr

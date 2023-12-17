@@ -1,0 +1,6 @@
+[mapr-edge-data2-aicom]
+mapr-edge-data2-aicom   MAPR_UID=1001 MAPR_GID=1001 MAPR_USER=mapr ansible_host= ansible_port=2222 ansible_user=vagrant ansible_ssh_private_key_file=/home/user2/mapr-cluster/.ssh/id_rsa
+
+VM Name: mapr-edge - No NIC 1 Rule(0) found.
+VM Name: mapr-master - No NIC 1 Rule(0) found.
+\n# Add other hosts as needed\n[mapr-edge:vars]\nMAPR_UID=1001\nMAPR_GID=1001\nMAPR_USER=mapr

@@ -1,0 +1,5 @@
+---
+- name: Start mapr-installer service
+  command: "sudo service mapr-installer start"
+  when: "'mapr-edge' in inventory_hostname"
+  become: yes
